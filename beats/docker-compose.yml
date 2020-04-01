@@ -1,0 +1,26 @@
+version: '3.3'
+services:
+ 
+  filebeat:
+    image: docker.elastic.co/beats/filebeat:7.6.1
+    user: root
+    command: 
+      - --strict.perms=false
+    # environment:
+    #   - setup.kibana.host=kibana:5601
+    #   - output.elasticsearch.hosts=["elasticsearch:9200"]
+    volumes:
+      - ./filebeat/log:/var/log/filebeat/log
+      - ./filebeat/output:/var/log/filebeat/output
+      - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+    # ports:
+    #   - 9000:9000
+    networks:
+      - elastic-beat
+
+
+networks:
+  elastic-beat:
+  

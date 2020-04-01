@@ -1,0 +1,35 @@
+2020-03-30T00:55:10.882Z	INFO	instance/beat.go:622	Home path: [/usr/share/filebeat] Config path: [/usr/share/filebeat] Data path: [/usr/share/filebeat/data] Logs path: [/usr/share/filebeat/logs]
+2020-03-30T00:55:10.886Z	INFO	instance/beat.go:630	Beat ID: 3ad6f3fb-59e4-4412-970e-e2e706979a25
+2020-03-30T00:55:10.899Z	INFO	[seccomp]	seccomp/seccomp.go:124	Syscall filter successfully installed
+2020-03-30T00:55:10.899Z	INFO	[beat]	instance/beat.go:958	Beat info	{"system_info": {"beat": {"path": {"config": "/usr/share/filebeat", "data": "/usr/share/filebeat/data", "home": "/usr/share/filebeat", "logs": "/usr/share/filebeat/logs"}, "type": "filebeat", "uuid": "3ad6f3fb-59e4-4412-970e-e2e706979a25"}}}
+2020-03-30T00:55:10.899Z	INFO	[beat]	instance/beat.go:967	Build info	{"system_info": {"build": {"commit": "c1c49432bdc53563e63e9d684ca3e9843626e448", "libbeat": "7.6.1", "time": "2020-02-28T23:12:26.000Z", "version": "7.6.1"}}}
+2020-03-30T00:55:10.899Z	INFO	[beat]	instance/beat.go:970	Go runtime info	{"system_info": {"go": {"os":"linux","arch":"amd64","max_procs":2,"version":"go1.13.8"}}}
+2020-03-30T00:55:10.900Z	INFO	[beat]	instance/beat.go:974	Host info	{"system_info": {"host": {"architecture":"x86_64","boot_time":"2020-03-28T06:31:58Z","containerized":true,"name":"44dabda79fff","ip":["127.0.0.1/8","172.19.0.2/16"],"kernel_version":"4.15.0-88-generic","mac":["02:42:ac:13:00:02"],"os":{"family":"redhat","platform":"centos","name":"CentOS Linux","version":"7 (Core)","major":7,"minor":7,"patch":1908,"codename":"Core"},"timezone":"UTC","timezone_offset_sec":0}}}
+2020-03-30T00:55:10.901Z	INFO	[beat]	instance/beat.go:1003	Process info	{"system_info": {"process": {"capabilities": {"inheritable":["chown","dac_override","fowner","fsetid","kill","setgid","setuid","setpcap","net_bind_service","net_raw","sys_chroot","mknod","audit_write","setfcap"],"permitted":["chown","dac_override","fowner","fsetid","kill","setgid","setuid","setpcap","net_bind_service","net_raw","sys_chroot","mknod","audit_write","setfcap"],"effective":["chown","dac_override","fowner","fsetid","kill","setgid","setuid","setpcap","net_bind_service","net_raw","sys_chroot","mknod","audit_write","setfcap"],"bounding":["chown","dac_override","fowner","fsetid","kill","setgid","setuid","setpcap","net_bind_service","net_raw","sys_chroot","mknod","audit_write","setfcap"],"ambient":null}, "cwd": "/usr/share/filebeat", "exe": "/usr/share/filebeat/filebeat", "name": "filebeat", "pid": 1, "ppid": 0, "seccomp": {"mode":"filter","no_new_privs":true}, "start_time": "2020-03-30T00:55:09.990Z"}}}
+2020-03-30T00:55:10.901Z	INFO	instance/beat.go:298	Setup Beat: filebeat; Version: 7.6.1
+2020-03-30T00:55:10.902Z	INFO	fileout/file.go:98	Initialized file output. path=/var/log/filebeat/output/filebeat max_size_bytes=10485760 max_backups=7 permissions=-rw-------
+2020-03-30T00:55:10.903Z	INFO	[publisher]	pipeline/module.go:110	Beat name: 44dabda79fff
+2020-03-30T00:55:10.904Z	WARN	beater/filebeat.go:152	Filebeat is unable to load the Ingest Node pipelines for the configured modules because the Elasticsearch output is not configured/enabled. If you have already loaded the Ingest Node pipelines or are using Logstash pipelines, you can ignore this warning.
+2020-03-30T00:55:10.904Z	INFO	[monitoring]	log/log.go:118	Starting metrics logging every 30s
+2020-03-30T00:55:10.904Z	INFO	instance/beat.go:439	filebeat start running.
+2020-03-30T00:55:10.905Z	INFO	registrar/registrar.go:145	Loading registrar data from /usr/share/filebeat/data/registry/filebeat/data.json
+2020-03-30T00:55:10.905Z	INFO	registrar/registrar.go:152	States Loaded from registrar: 3
+2020-03-30T00:55:10.905Z	WARN	beater/filebeat.go:368	Filebeat is unable to load the Ingest Node pipelines for the configured modules because the Elasticsearch output is not configured/enabled. If you have already loaded the Ingest Node pipelines or are using Logstash pipelines, you can ignore this warning.
+2020-03-30T00:55:10.905Z	INFO	crawler/crawler.go:72	Loading Inputs: 1
+2020-03-30T00:55:10.906Z	INFO	log/input.go:152	Configured paths: [/var/lib/docker/containers/*/*.log]
+2020-03-30T00:55:10.906Z	INFO	input/input.go:114	Starting input of type: container; ID: 4790940292287615062 
+2020-03-30T00:55:10.906Z	INFO	crawler/crawler.go:106	Loading and starting Inputs completed. Enabled inputs: 1
+2020-03-30T00:55:10.907Z	INFO	log/harvester.go:297	Harvester started for file: /var/lib/docker/containers/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b-json.log
+2020-03-30T00:55:13.683Z	INFO	beater/filebeat.go:443	Stopping filebeat
+2020-03-30T00:55:13.683Z	INFO	crawler/crawler.go:139	Stopping Crawler
+2020-03-30T00:55:13.683Z	INFO	crawler/crawler.go:149	Stopping 1 inputs
+2020-03-30T00:55:13.684Z	INFO	input/input.go:149	input ticker stopped
+2020-03-30T00:55:13.684Z	INFO	input/input.go:167	Stopping Input: 4790940292287615062
+2020-03-30T00:55:13.684Z	INFO	log/harvester.go:320	Reader was closed: /var/lib/docker/containers/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b-json.log. Closing.
+2020-03-30T00:55:13.685Z	INFO	crawler/crawler.go:165	Crawler stopped
+2020-03-30T00:55:13.685Z	INFO	registrar/registrar.go:367	Stopping Registrar
+2020-03-30T00:55:13.685Z	INFO	registrar/registrar.go:293	Ending Registrar
+2020-03-30T00:55:13.694Z	INFO	[monitoring]	log/log.go:153	Total non-zero metrics	{"monitoring": {"metrics": {"beat":{"cpu":{"system":{"ticks":40,"time":{"ms":40}},"total":{"ticks":240,"time":{"ms":242},"value":0},"user":{"ticks":200,"time":{"ms":202}}},"handles":{"limit":{"hard":1048576,"soft":1048576},"open":10},"info":{"ephemeral_id":"51299c3b-1820-44c3-8fb0-ff0754ba4214","uptime":{"ms":2847}},"memstats":{"gc_next":9805344,"memory_alloc":6764776,"memory_total":16144784,"rss":49840128},"runtime":{"goroutines":18}},"filebeat":{"events":{"added":146,"done":146},"harvester":{"closed":1,"open_files":0,"running":0,"started":1}},"libbeat":{"config":{"module":{"running":0}},"output":{"events":{"acked":142,"batches":2,"total":142},"type":"file","write":{"bytes":56090}},"pipeline":{"clients":0,"events":{"active":0,"filtered":4,"published":142,"total":146},"queue":{"acked":142}}},"registrar":{"states":{"current":3,"update":146},"writes":{"success":7,"total":7}},"system":{"cpu":{"cores":2},"load":{"1":0.56,"15":0.04,"5":0.12,"norm":{"1":0.28,"15":0.02,"5":0.06}}}}}}
+2020-03-30T00:55:13.694Z	INFO	[monitoring]	log/log.go:154	Uptime: 2.848743962s
+2020-03-30T00:55:13.694Z	INFO	[monitoring]	log/log.go:131	Stopping metrics logging.
+2020-03-30T00:55:13.694Z	INFO	instance/beat.go:445	filebeat stopped.

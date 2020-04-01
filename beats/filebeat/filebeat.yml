@@ -1,0 +1,44 @@
+filebeat.inputs:
+- type: container
+  paths: 
+    - '/var/lib/docker/containers/*/*.log'
+  exclude_files: ['\.gz$']
+  json.keys_under_root: false
+  json.add_error_key: true
+  # json.message_key: log
+  # multiline.pattern: '^\['
+  # multiline.negate: true
+  # multiline.match: after
+
+# output.console:
+#     pretty: true
+
+output.logstash:
+  hosts: ["192.168.33.11:5044"]
+
+# output.file:
+#   path: "/var/log/filebeat/output"
+#   filename: filebeat
+
+
+processors:
+  - add_docker_metadata:
+      host: "unix:///var/run/docker.sock"
+  - add_host_metadata:
+      netinfo.enabled: true
+  - include_fields:
+      fields: ["json.log", "json.error", "agent", "host.ip", "container"]
+  - drop_fields:
+      fields: ["agent.ephemeral_id", "agent.id"]
+
+
+# Write Filebeat own logs only to file to avoid catching them with itself in docker log files
+# logging.level: info
+# logging.to_files: false
+# logging.to_syslog: false
+# loggins.metrice.enabled: false
+logging.files:
+  path: /var/log/filebeat/log
+  name: filebeat
+  keepfiles: 7
+  permissions: 0644

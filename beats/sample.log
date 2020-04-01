@@ -1,0 +1,127 @@
+{"log":"现在的 index 是：1 ","stream":"stdout","time":"2020-03-19 14:59:10.413351494 +0000 UTC m=+0.000071044"}
+
+output:console
+filebeat_1  | {
+filebeat_1  |   "@timestamp": "2020-03-19T14:59:10.413Z",
+filebeat_1  |   "@metadata": {
+filebeat_1  |     "beat": "filebeat",
+filebeat_1  |     "type": "_doc",
+filebeat_1  |     "version": "7.6.1"
+filebeat_1  |   },
+filebeat_1  |   "message": "{\"log\":\"现在的 index 是：1 \",\"stream\":\"stdout\",\"time\":\"2020-03-19 14:59:10.413351494 +0000 UTC m=+0.000071044\"}",
+filebeat_1  |   "input": {
+filebeat_1  |     "type": "container"
+filebeat_1  |   },
+filebeat_1  |   "ecs": {
+filebeat_1  |     "version": "1.4.0"
+filebeat_1  |   },
+filebeat_1  |   "host": {
+filebeat_1  |     "name": "6915696baf44"
+filebeat_1  |   },
+filebeat_1  |   "agent": {
+filebeat_1  |     "ephemeral_id": "2c20fb25-0a3e-4699-b335-282f6cbd0dba",
+filebeat_1  |     "hostname": "6915696baf44",
+filebeat_1  |     "id": "6406edc3-9543-4cb6-b0e0-a16c05f197f7",
+filebeat_1  |     "version": "7.6.1",
+filebeat_1  |     "type": "filebeat"
+filebeat_1  |   },
+filebeat_1  |   "container": {
+filebeat_1  |     "id": "a1f393dcfc281f0ed153cf6893f0f39245952d178978a583d1d13d28de6b9e5a",
+filebeat_1  |     "name": "logtest",
+filebeat_1  |     "image": {
+filebeat_1  |       "name": "hackbee/logtest:1.0.1"
+filebeat_1  |     }
+filebeat_1  |   },
+filebeat_1  |   "log": {
+filebeat_1  |     "offset": 0,
+filebeat_1  |     "file": {
+filebeat_1  |       "path": "/var/lib/docker/containers/a1f393dcfc281f0ed153cf6893f0f39245952d178978a583d1d13d28de6b9e5a/a1f393dcfc281f0ed153cf6893f0f39245952d178978a583d1d13d28de6b9e5a-json.log"
+filebeat_1  |     }
+filebeat_1  |   },
+filebeat_1  |   "stream": "stdout"
+filebeat_1  | }
+
+output:logfile
+{
+  "@timestamp": "2020-03-28T09:47:46.331Z",
+  "@metadata": {
+    "beat": "filebeat",
+    "type": "_doc",
+    "version": "7.6.1"
+  },
+  "stream": "stdout",
+  "message": "{\"log\":\"现在的 index 是：1674 \",\"stream\":\"stdout\",\"time\":\"2020-03-28 09:47:46.331040272 +0000 UTC m=+3352.014292157\"}",
+  "input": {
+    "type": "container"
+  },
+  "agent": {
+    "ephemeral_id": "79808939-8e04-4bc2-a97b-95a2231dc852",
+    "hostname": "44dabda79fff",
+    "id": "3ad6f3fb-59e4-4412-970e-e2e706979a25",
+    "version": "7.6.1",
+    "type": "filebeat"
+  },
+  "ecs": {
+    "version": "1.4.0"
+  },
+  "host": {
+    "name": "44dabda79fff"
+  },
+  "container": {
+    "name": "logtest",
+    "id": "fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b",
+    "image": {
+      "name": "hackbee/logtest:1.0.2"
+    }
+  },
+  "log": {
+    "offset": 911778,
+    "file": {
+      "path": "/var/lib/docker/containers/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b-json.log"
+    }
+  }
+}
+
+output:logstash
+logstash_1       | {
+logstash_1       |          "input" => {
+logstash_1       |         "type" => "container"
+logstash_1       |     },
+logstash_1       |           "host" => {
+logstash_1       |         "name" => "44dabda79fff"
+logstash_1       |     },
+logstash_1       |        "message" => "{\"log\":\"现在的 index 是：121 \",\"stream\":\"stdout\",\"time\":\"2020-03-28 09:51:49.668357606 +0000 UTC m=+240.332734423\"}",
+logstash_1       |            "ecs" => {
+logstash_1       |         "version" => "1.4.0"
+logstash_1       |     },
+logstash_1       |     "@timestamp" => 2020-03-28T09:51:49.668Z,
+logstash_1       |      "container" => {
+logstash_1       |         "image" => {
+logstash_1       |             "name" => "hackbee/logtest:1.0.2"
+logstash_1       |         },
+logstash_1       |            "id" => "fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b",
+logstash_1       |          "name" => "logtest"
+logstash_1       |     },
+logstash_1       |          "agent" => {
+logstash_1       |              "version" => "7.6.1",
+logstash_1       |             "hostname" => "44dabda79fff",
+logstash_1       |                 "type" => "filebeat",
+logstash_1       |         "ephemeral_id" => "4ab9bd30-f2a9-4293-b712-adc2ac566f45",
+logstash_1       |                   "id" => "3ad6f3fb-59e4-4412-970e-e2e706979a25"
+logstash_1       |     },
+logstash_1       |       "@version" => "1",
+logstash_1       |         "stream" => "stdout",
+logstash_1       |           "tags" => [
+logstash_1       |         [0] "beats_input_codec_plain_applied"
+logstash_1       |     ],
+logstash_1       |            "log" => {
+logstash_1       |         "offset" => 936160,
+logstash_1       |           "file" => {
+logstash_1       |             "path" => "/var/lib/docker/containers/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b/fc02fcddcf5b0a3153242716f8149bb38c8877d8dc90be1d8d871496ba890a5b-json.log"
+logstash_1       |         }
+logstash_1       |     }
+logstash_1       | }
+
+
+
+
